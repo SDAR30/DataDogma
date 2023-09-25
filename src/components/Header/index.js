@@ -1,7 +1,7 @@
 import React from 'react'
 import { Logo } from './Logo';
 import Link from 'next/link';
-import { GithubIcon, LeetcodeIcon, LinkedinIcon, TwitterIcon } from '../icons';
+import { GithubIcon, LeetcodeIcon, LinkedinIcon, SunIcon, TwitterIcon } from '../icons';
 
 const Header = () => {
     return (
@@ -11,7 +11,9 @@ const Header = () => {
                 <Link href="/" className='mx-2'>Home</Link>
                 <Link href="/about" className='mx-2'>About</Link>
                 <Link href="/contact" className='mx-2'>Contact</Link>
-                <button>T</button>
+                <button>
+                    <SunIcon />
+                </button>
             </nav>
             <div>
                 <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4'><GithubIcon className='hover:scale-125 transition-all ease duration-200' /></a>
