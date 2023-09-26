@@ -11,7 +11,7 @@ function HomeCoverSection({ blogs }) {
         <div className='w-full inline-block'>
             <article className='flex flex-col items-start justify-end mx-10 relative h-[85vh]'>
                 <div className='absolute top-0 left-0 bottom-0 right-0 h-full 
-                bg-gradient-to-b from-transparent from-0% to-dark rounded-3xl z0'></div>
+                bg-gradient-to-b from-transparent from-0% to-dark/90 rounded-3xl z0'></div>
                 <Image src={blog.image.filePath.replace("../public", '')}
                     placeholder='blur'
                     blurDataURL={blog.image.blurhashDataUrl}
@@ -25,8 +25,8 @@ function HomeCoverSection({ blogs }) {
 
                     <Link href={blog.url} className='mt-6'>
                         <h1 className='font-bold capitalize text-4xl'>
-                            <span className='[text-shadow:_3px_3px_3px_rgb(0_0_0_/_100%)] bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
-                           hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500'>
+                            <span className='[text-shadow:_3px_3px_3px_rgb(0_0_0_/_100%)] bg-gradient-to-r from-white to-white bg-[length:0px_2px]
+                           hover:bg-[length:100%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500'>
                                 {blog.title}
                             </span>
                         </h1>
