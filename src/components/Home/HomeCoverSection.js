@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 function HomeCoverSection({ blogs }) {
     const sortedBlogs = sortBlogs(blogs);
-    const blog = sortedBlogs[0];
+    const blog = sortedBlogs[1];
     return (
         <div className='w-full inline-block'>
             <article className='flex flex-col items-start justify-end mx-10 relative h-[85vh]'>
@@ -25,7 +25,7 @@ function HomeCoverSection({ blogs }) {
 
                     <Link href={blog.url} className='mt-6'>
                         <h1 className='font-bold capitalize text-4xl'>
-                            <span className='bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
+                            <span className='[text-shadow:_3px_3px_3px_rgb(0_0_0_/_100%)] bg-gradient-to-r from-accent to-accent bg-[length:0px_6px]
                            hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition-[background-size] duration-500'>
                                 {blog.title}
                             </span>
@@ -33,7 +33,7 @@ function HomeCoverSection({ blogs }) {
 
                     </Link>
                     
-                    <p>{blog.description}</p>
+                    <p classNiname='inline-block mt-4 text-xl font-in'>{blog.description}</p>
 
                 </div>
             </article>
