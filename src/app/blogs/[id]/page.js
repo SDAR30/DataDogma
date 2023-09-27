@@ -1,5 +1,6 @@
 import { allBlogs } from "@/.contentlayer/generated"
 import BlogDetails from "@/src/components/Blog/BlogDetails"
+import RenderMdx from "@/src/components/Blog/RenderMdx"
 import Tag from "@/src/components/Elements/Tag"
 import Image from "next/image"
 
@@ -28,6 +29,10 @@ export default function BlogPage({ params }) {
                     duration-300' />
             </div>
             <BlogDetails blog={blog} id={params.id} />
+            <div className="grid grid-cols-12 gap-16 mt-8 py-10">
+                <div className="col-span-4">Toc</div>
+                <RenderMdx blog={blog}/>
+            </div>
         </article>
     )
 }
