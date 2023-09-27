@@ -10,7 +10,7 @@ function Footer(props) {
     console.log(errors);
 
     return (
-        <footer className='mt-16 rounded-2xl bg-dark m-10 flex flex-col items-center text-light'>
+        <footer className='mt-14 mx-10 mb-4 rounded-2xl bg-dark  flex flex-col items-center text-light'>
             <h3 className='mt-16 font-medium text-center capitalize text-4xl px-4'>Interesting Stories | Updates | Guides
             </h3>
             <p className='mt-5 px-4 text-center w-3/5 font-light text-base'>
@@ -24,16 +24,16 @@ function Footer(props) {
             </form>
 
             <div className='flex items-center mt-8'>
-                <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4'><GithubIcon className='hover:scale-125 transition-all ease duration-200' /></a>
+                <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4 fill-light'><GithubIcon className='hover:scale-125 transition-all ease duration-200' /></a>
                 <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4'><LinkedinIcon className='hover:scale-125 transition-all ease duration-200' /></a>
-                <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4 fill-light'><TwitterIcon className='hover:scale-125 transition-all ease duration-200' /></a>
+                <a href='https://github.com/sdar30' className='inline-block w-6 h-6 mr-4'><TwitterIcon className='hover:scale-125 transition-all ease duration-200' /></a>
                 <a href='https://leetcode.com/SDAR30/' className='inline-block w-6 h-6 mr-4'><LeetcodeIcon className='hover:scale-125 transition-all ease duration-200' /></a>
             </div>
 
-            <div className='w-full mt-24 relative font-medium border-t border-solid border-light py-6 px-8 flex flex-row items-center justify-between'>
+            <div className='w-full mt-14 relative font-medium border-t border-solid border-light py-6 px-8 flex flex-row items-center justify-between'>
                 <span className='text-center'>&copy; 2023 Shoaib Dar. All rights reserved.</span>
                 <Link href='/sitemap.xml' className='text-center underline'>sitemap.xml</Link>
-                <div className='text-center'>Made with &hearts; by <a href="https://github.com/sdar30" className='underline'>Shoaib Dar</a></div>
+                <div className='text-center'>Created and edited by <a href="https://github.com/sdar30" className='underline'>Shoaib Dar</a></div>
             </div>
 
         </footer>
