@@ -3,7 +3,12 @@ import BlogDetails from "@/src/components/Blog/BlogDetails"
 import RenderMdx from "@/src/components/Blog/RenderMdx"
 import Tag from "@/src/components/Elements/Tag"
 import Image from "next/image"
-import {slug} from 'github-slugger'
+import { slug } from 'github-slugger'
+
+export async function generateStaticParams() {
+    return allBlogs.map((blog) => {slug: blog._raw.flattenedPath})
+}
+
 
 export default function BlogPage({ params }) {
     const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.id)
@@ -33,21 +38,21 @@ export default function BlogPage({ params }) {
             <div className="grid grid-cols-12 gap-16 mt-4 py-10">
                 <div className="col-span-4">
                     <details className="border-[1px] border-solid border-dark text-dark rounded-lg p-4 sticky
-                    top-6 max-h-[80vh] overflow-hidden over-flow-y-auto" open> 
+                    top-6 max-h-[80vh] overflow-hidden over-flow-y-auto" open>
                         <summary className="text-lg font-semibold capitalize cursor-pointer">Table of Contents</summary>
                         <ul className='mt-4 font-in text-base'>
                             {
-                                blog.tableOfContents.map((heading) =>{
+                                blog.tableOfContents.map((heading) => {
                                     return <li key={`#${heading.slug}`} className="py-1">
-                                        <a href={`#${heading.slug}`} 
-                                            data-level={heading.level} 
-                                                className="data-[level=two]:pl-0 data-[level=two]:pt-2 
+                                        <a href={`#${heading.slug}`}
+                                            data-level={heading.level}
+                                            className="data-[level=two]:pl-0 data-[level=two]:pt-2 
                                                 data-[level=two]:border-t border-solid border-dark/40
 
                                                 data-[level=three]:pl-4
                                                 flex items-center justify-start" >
-                                                    {heading.level === "three" ? <span className="flex w-1 h-1 rounded-full bg-dark mr-2">&nbsp;</span> : null}
-                                            
+                                            {heading.level === "three" ? <span className="flex w-1 h-1 rounded-full bg-dark mr-2">&nbsp;</span> : null}
+
                                             <span className="hover:underline">{heading.text}</span>
                                         </a>
                                     </li>
